@@ -1,0 +1,18 @@
+body{
+    background: url("fon.png");
+    background-attachment: fixed;
+}
+main{
+    background-color: white;
+}
+table{
+    border: 2px solid black;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.dtsb-searchBuilder select {
+    width: 120px;
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+}
