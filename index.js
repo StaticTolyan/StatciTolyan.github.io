@@ -358,21 +358,21 @@ $(document).ready(function() {
                 k++;
             } 
         }
-        top[j][0]=a+za*5+ya*(-3)+v*(-10);
-        top[j][1]=vyshi[j];
-        top[j][2]=k;
-        top[j][3]=za;
-        top[j][4]=Math.round((za/k)*100) + '%';
-        top[j][5]=a;
-        top[j][6]=Math.round((a/k)*100) + '%';
-        top[j][7]=ya;
-        top[j][8]=Math.round((ya/k)*100) + '%';
-        top[j][9]=v;
-        top[j][10]=Math.round((v/k)*100) + '%';
-        top[j][11]=Ga;
-        top[j][12]=Math.round((Ga/k)*100) + '%';
-        top[j][13]=Ba;
-        top[j][14]=Math.round((Ba/k)*100) + '%';
+        top[j][0]=vyshi[j];
+        top[j][1]=k;
+        top[j][2]=za;
+        top[j][3]=Math.round((za/k)*100) + '%';
+        top[j][4]=a;
+        top[j][5]=Math.round((a/k)*100) + '%';
+        top[j][6]=ya;
+        top[j][7]=Math.round((ya/k)*100) + '%';
+        top[j][8]=v;
+        top[j][9]=Math.round((v/k)*100) + '%';
+        top[j][10]=Ga;
+        top[j][11]=Math.round((Ga/k)*100) + '%';
+        top[j][12]=Ba;
+        top[j][13]=Math.round((Ba/k)*100) + '%';
+        top[j][14]=a+za*5+ya*(-3)+v*(-10);
     }
     
 
@@ -383,10 +383,29 @@ $(document).ready(function() {
         responsive: true,
         fixedHeader: true,
         fixedColumns: true,
+        buttons: [
+            'colvis',
+            {
+                extend: 'collection',
+                text: 'Експорт',
+                buttons: [ 'excel', 
+                    {
+                    extend: 'pdfHtml5',
+                    exportOptions: {
+                        modifier: {
+                            page: 'current'
+                        }
+                    },
+                    orientation: 'landscape',
+                    title: ''
+                    }
+                    , 'print']
+            }            
+        ],
+        dom: 'Qlfrtip',
         lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "Всі"] ],
         data: top,
         columns: [
-            { title: 'БАЛ' },
             { title: 'Назва Університету' },
             { title: 'Справ' },
             { title: 'Зразкових'},
@@ -401,7 +420,9 @@ $(document).ready(function() {
             { title: '% Успішних'},
             { title: 'Неуспішних'},
             { title: '% Неуспішних'},
+            { title: 'БАЛ' }
         ]
     } );
-    TOPtable.column( 0 ).data().sort().reverse();;
+    TOPtable.buttons().container()
+    .appendTo( $('#topbtns') );
 } );
