@@ -10,18 +10,19 @@
     <link href="style.css" rel="stylesheet">
 </head>
 
-  <body>
-    <main class="container">
+  <body class="w-100">
+    <main class="m-auto p-3">
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <button class="nav-link active" id="nav-final-tab" data-bs-toggle="tab" data-bs-target="#nav-final" type="button" role="tab" aria-controls="nav-final" aria-selected="true">Протоколи фінального рішення</button>
           <button class="nav-link" id="nav-preliminary-tab" data-bs-toggle="tab" data-bs-target="#nav-preliminary" type="button" role="tab" aria-controls="nav-preliminary" aria-selected="false">Протоколи попереднього рішення</button>
+          <button class="nav-link" id="nav-analytics-tab" data-bs-toggle="tab" data-bs-target="#nav-analytics" type="button" role="tab" aria-controls="nav-analytics" aria-selected="false">Аналітика</button>
         </div>
       </nav>
       <div class="tab-content py-3" id="nav-tabContent">            
         <div class="tab-pane fade show active" id="nav-final" role="tabpanel" aria-labelledby="nav-final-tab">
             <div id="finalbtns" class="d-flex justify-content-end"></div>
-            <table id="final" class="display cell-border compact" style="width:100%">
+            <table id="final" class="display cell-border compact w-100">
             <thead>
                  <tr>
                     <th>№</th>
@@ -509,7 +510,7 @@
                         <td>40</td>
                         <td>А-19-0320-359</td>
                         <td>5744</td>
-                        <td>«Закарпатський угорський інститут імені Ференца Ракоці ІІ»</td>
+                        <td>Закарпатський угорський інститут імені Ференца Ракоці ІІ</td>
                         <td>Бакалавр</td>
                         <td>07</td>
                         <td>071 Облік і оподаткування</td>
@@ -1217,7 +1218,7 @@
                         <td>99</td>
                         <td>А-19-0329-361</td>
                         <td>7394</td>
-                        <td>«Класичний приватний університет»</td>
+                        <td>Класичний приватний університет</td>
                         <td>Магістр</td>
                         <td>05</td>
                         <td>051 Економіка</td>
@@ -1229,7 +1230,7 @@
                         <td>100</td>
                         <td>А-19-0329-362</td>
                         <td>8956</td>
-                        <td>«Класичний приватний університет»</td>
+                        <td>Класичний приватний університет</td>
                         <td>Магістр</td>
                         <td>05</td>
                         <td>051 Економіка</td>
@@ -8693,7 +8694,7 @@
                         <td>722</td>
                         <td>0536/АС-20</td>
                         <td>11464</td>
-                        <td>"Приватне акціонерне товариство «Вищий навчальний заклад «Національна академія управління»"</td>
+                        <td>Приватне акціонерне товариство «Вищий навчальний заклад «Національна академія управління»</td>
                         <td>Магістр</td>
                         <td>07</td>
                         <td>075 Маркетинг</td>
@@ -8729,7 +8730,7 @@
                         <td>725</td>
                         <td>0192/АС-20</td>
                         <td>31586</td>
-                        <td>"Івано-Франківський коледж Львівського національного аграрного університету"</td>
+                        <td>Івано-Франківський коледж Львівського національного аграрного університету</td>
                         <td>Бакалавр</td>
                         <td>08</td>
                         <td>081 Право</td>
@@ -22640,7 +22641,7 @@
         </div>
         <div class="tab-pane fade" id="nav-preliminary" role="tabpanel" aria-labelledby="nav-preliminary-tab">
             <div id="prevbtns" class="d-flex justify-content-end"></div>
-            <table id="prev" class="display cell-border compact" style="width:100%">
+            <table id="prev" class="display cell-border compact w-100">
             <thead>
                 <tr>
                     <th>№</th>
@@ -23992,6 +23993,10 @@
                 </tr>
             </tfoot>
         </table>
+        </div>
+        <div class="tab-pane fade" id="nav-analytics" role="tabpanel" aria-labelledby="nav-analytics-tab">
+            <h1 class="m-auto p-4">Топ університетів</h1>
+            <table id="Top" class="display cell-border compact w-100"></table>
         </div>
       </div>
     </main>
