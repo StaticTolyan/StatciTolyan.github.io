@@ -1,9 +1,18 @@
-.dtsb-searchBuilder select {
-    width: 120px;
-    overflow: hidden;
-    white-space: pre;
-    text-overflow: ellipsis;
+#map {
+  height: 80vh;
 }
-#nav-analytics{
-    text-align: center;
+
+#map2 {
+  height: 80vh;
 }
+/*
+.leaflet-routing-alt table{
+  display: none;
+}
+
+.leaflet-routing-alt h2{
+  display: none;
+}
+
+.leaflet-routing-alt{margin-bottom:0;}
+*/
